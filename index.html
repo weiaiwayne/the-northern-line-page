@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Northern Line - Bilingual Script</title>
+    <style>
+        :root {
+            --bg-primary: #1a1a1a;
+            --bg-secondary: #2d2d2d;
+            --bg-tertiary: #363636;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --accent-primary: #7289da;
+            --accent-secondary: #5865f2;
+            --border-color: #404040;
+            --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            --hover-transition: all 0.3s ease;
+        }
+
+        body { 
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; 
+            background: var(--bg-primary);
+            padding: 2rem;
+            color: var(--text-primary);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        h1 { 
+            color: var(--text-primary);
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .card { 
+            background: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .chapter-card {
+            background: var(--bg-tertiary);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border-color);
+            transition: var(--hover-transition);
+        }
+
+        .chapter-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .chapter-card h3 {
+            color: var(--text-primary);
+            margin-top: 0;
+            font-size: 1.3rem;
+            border-bottom: 2px solid var(--accent-primary);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .chapter-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        a { 
+            text-decoration: none;
+            color: var(--accent-primary);
+            transition: var(--hover-transition);
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+        }
+
+        a:hover { 
+            color: var(--text-primary);
+            background: var(--accent-primary);
+            transform: translateY(-1px);
+        }
+
+        .language-badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-left: 0.5rem;
+            font-weight: 600;
+        }
+
+        .english { 
+            background: rgba(114, 137, 218, 0.2);
+            color: #7289da;
+            border: 1px solid rgba(114, 137, 218, 0.3);
+        }
+
+        .chinese { 
+            background: rgba(88, 101, 242, 0.2);
+            color: #5865f2;
+            border: 1px solid rgba(88, 101, 242, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .chapter-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--bg-tertiary);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-primary);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>The Northern Line</h1>
+        <p class="subtitle">A bilingual apocalyptic political thriller exploring themes of exile, restoration, and hope in a fractured America.</p>
+        
+        <div class="card">
+            <h2>📚 Latest Chapters</h2>
+            <div class="chapter-grid">
+                <div class="chapter-card">
+                    <h3>May 10, 2025</h3>
+                    <div class="chapter-links">
+                        <a href="docs/English_Writer_chapter_20250510.md" target="_blank">
+                            English<span class="language-badge english">E</span>
+                        </a>
+                        <a href="docs/Chinese_Writer_chapter_20250510.md" target="_blank">
+                            Chinese<span class="language-badge chinese">C</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
